@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "42360897122",
+    "firebase_url": "https://appaves-6eda1.firebaseio.com",
+    "project_id": "appaves-6eda1",
+    "storage_bucket": "appaves-6eda1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42360897122:android:6587ff5c3446eeeac51b3b",
+        "android_client_info": {
+          "package_name": "cl.talentodigital.aves"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42360897122-vttenasq9f1b14q3je2uqt0an4cl4nas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBci13Zevi9nQJo52MRegWgPCLRKPsIsng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42360897122-vttenasq9f1b14q3je2uqt0an4cl4nas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

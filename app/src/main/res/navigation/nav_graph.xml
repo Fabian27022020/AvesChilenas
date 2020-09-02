@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registroUsuarioFragment">
+
+    <fragment
+        android:id="@+id/registroUsuarioFragment"
+        android:name="cl.talentodigital.aves.resgistro.presentation.RegistroUsuarioFragment"
+        android:label="RegistroUsuarioFragment" />
+    <fragment
+        android:id="@+id/loginUsuarioFragment"
+        android:name="cl.talentodigital.aves.login.presentation.LoginUsuarioFragment"
+        android:label="LoginUsuarioFragment"
+        tools:layout="@layout/fragment_login_usuario"
+        >
+        <action
+            android:id="@+id/action_loginUsuarioFragment_to_registroUsuarioFragment"
+            app:destination="@id/registroUsuarioFragment" />
+    </fragment>
+</navigation>
