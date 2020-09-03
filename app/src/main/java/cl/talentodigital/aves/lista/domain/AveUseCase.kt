@@ -1,7 +1,7 @@
 package cl.talentodigital.aves.lista.domain
 
-class AvesUseCase(
-    private val repository: AvesRepository
+class AveUseCase(
+    private val repository: AveRepository
 ) {
 
     suspend fun excecute() = repository.getAves()

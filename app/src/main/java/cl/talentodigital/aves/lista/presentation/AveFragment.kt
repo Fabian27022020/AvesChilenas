@@ -5,15 +5,14 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import cl.talentodigital.aves.R
 import cl.talentodigital.aves.databinding.FragmentAvesBinding
-import cl.talentodigital.aves.databinding.FragmentLoginUsuarioBinding
-import cl.talentodigital.aves.lista.domain.AvesRepository
+import cl.talentodigital.aves.lista.domain.AveRepository
 import io.reactivex.disposables.CompositeDisposable
 
-class AvesFragment : Fragment(R.layout.fragment_aves) {
+class AveFragment : Fragment(R.layout.fragment_aves) {
 
     private lateinit var binding: FragmentAvesBinding
-    private lateinit var repository: AvesRepository
-    private lateinit var avesAdapter: AvesAdapter
+    private lateinit var repository: AveRepository
+    private lateinit var aveAdapter: AveAdapter
     private val compositeDisposable = CompositeDisposable()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -27,6 +26,8 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
     }
 
     private fun setupDependencies() {
+
+
 
     }
 

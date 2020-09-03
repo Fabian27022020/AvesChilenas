@@ -2,9 +2,7 @@ package cl.talentodigital.aves.lista.domain.model
 
 data class Ave (
     val uid : String,
-    val name : String,
-    val images : String,
-    val  links : String
-
-
+    val name : Name,
+    val images : Images,
+    val  sort : Int
 )

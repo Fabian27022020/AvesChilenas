@@ -1,6 +1,6 @@
 package cl.talentodigital.aves.login.domain
 
-class LoginUsuario (
+data class LoginUsuario (
     val nombre : String,
     val email : String
 )
