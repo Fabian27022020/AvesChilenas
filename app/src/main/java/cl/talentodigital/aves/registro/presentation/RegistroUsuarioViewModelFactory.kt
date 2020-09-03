@@ -1,8 +1,8 @@
-package cl.talentodigital.aves.resgistro.presentation
+package cl.talentodigital.aves.registro.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuarioUseCase
+import cl.talentodigital.aves.registro.domain.RegistroUsuarioUseCase
 
 class RegistroUsuarioViewModelFactory(
     private val registroUsuarioUseCase: RegistroUsuarioUseCase

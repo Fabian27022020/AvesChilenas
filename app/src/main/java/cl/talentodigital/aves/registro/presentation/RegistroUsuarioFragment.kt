@@ -1,4 +1,4 @@
-package cl.talentodigital.aves.resgistro.presentation
+package cl.talentodigital.aves.registro.presentation
 
 import android.os.Bundle
 import android.view.View
@@ -7,9 +7,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import cl.talentodigital.aves.R
 import cl.talentodigital.aves.databinding.FragmentRegistroUsuarioBinding
-import cl.talentodigital.aves.resgistro.data.remote.FirebaseRegistroUsuarioRepository
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuario
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuarioUseCase
+import cl.talentodigital.aves.registro.data.remote.FirebaseRegistroUsuarioRepository
+import cl.talentodigital.aves.registro.domain.RegistroUsuario
+import cl.talentodigital.aves.registro.domain.RegistroUsuarioUseCase
 import cl.talentodigital.aves.utils.extension.*
 import com.google.firebase.auth.FirebaseAuth
 

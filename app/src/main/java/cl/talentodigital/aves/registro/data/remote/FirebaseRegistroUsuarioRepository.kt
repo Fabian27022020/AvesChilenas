@@ -1,7 +1,7 @@
-package cl.talentodigital.aves.resgistro.data.remote
+package cl.talentodigital.aves.registro.data.remote
 
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuario
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuarioRepository
+import cl.talentodigital.aves.registro.domain.RegistroUsuario
+import cl.talentodigital.aves.registro.domain.RegistroUsuarioRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import kotlinx.coroutines.tasks.await

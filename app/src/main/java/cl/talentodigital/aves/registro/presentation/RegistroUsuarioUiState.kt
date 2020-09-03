@@ -1,4 +1,4 @@
-package cl.talentodigital.aves.resgistro.presentation
+package cl.talentodigital.aves.registro.presentation
 
 sealed class RegistroUsuarioUiState(
     open val result: Boolean? = null,

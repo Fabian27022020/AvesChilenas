@@ -1,4 +1,4 @@
-package cl.talentodigital.aves.resgistro.domain
+package cl.talentodigital.aves.registro.domain
 
 class RegistroUsuario (
     val nombre : String,

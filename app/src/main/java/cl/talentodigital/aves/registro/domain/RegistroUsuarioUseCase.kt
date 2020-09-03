@@ -1,4 +1,4 @@
-package cl.talentodigital.aves.resgistro.domain
+package cl.talentodigital.aves.registro.domain
 
 class RegistroUsuarioUseCase (private  val  registroUsuarioRepository: RegistroUsuarioRepository){
 

@@ -12,4 +12,6 @@
     <string name="ingrese_password">ingrese password</string>
     <string name="entrar">entrar</string>
     <string name="registro">registro</string>
+    <string name="nombre_ave">nombre ave</string>
+    <string name="link">Link</string>
 </resources>

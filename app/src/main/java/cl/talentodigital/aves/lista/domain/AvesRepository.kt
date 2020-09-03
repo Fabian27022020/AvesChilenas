@@ -1,4 +1,7 @@
 package cl.talentodigital.aves.lista.domain
 
-interface AvesRepository {
+import cl.talentodigital.aves.lista.domain.model.Ave
+
+interface AvesRepository  {
+    suspend fun getAves() : Ave
 }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/registroUsuarioFragment"
-        android:name="cl.talentodigital.aves.resgistro.presentation.RegistroUsuarioFragment"
+        android:name="cl.talentodigital.aves.registro.presentation.RegistroUsuarioFragment"
         android:label="RegistroUsuarioFragment" />
     <fragment
         android:id="@+id/loginUsuarioFragment"

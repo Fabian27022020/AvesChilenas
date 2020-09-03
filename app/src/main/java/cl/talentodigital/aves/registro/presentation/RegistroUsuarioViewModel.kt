@@ -1,10 +1,10 @@
-package cl.talentodigital.aves.resgistro.presentation
+package cl.talentodigital.aves.registro.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuario
-import cl.talentodigital.aves.resgistro.domain.RegistroUsuarioUseCase
+import cl.talentodigital.aves.registro.domain.RegistroUsuario
+import cl.talentodigital.aves.registro.domain.RegistroUsuarioUseCase
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import kotlinx.coroutines.launch
 
