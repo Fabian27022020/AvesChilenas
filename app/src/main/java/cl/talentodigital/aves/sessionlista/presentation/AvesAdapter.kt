@@ -8,22 +8,22 @@ import cl.talentodigital.aves.R
 import cl.talentodigital.aves.sessionlista.domain.model.Ave
 
 
-class AveAdapter (
+class AvesAdapter (
     private val list: List<Ave>
-) : RecyclerView.Adapter<AveViewHolder>(){
+) : RecyclerView.Adapter<AvesViewHolder>(){
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AveViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AvesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view : View = inflater.inflate(R.layout.aves_item, parent, false)
-        return AveViewHolder(view)
+        return AvesViewHolder(view)
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
 
-    override fun onBindViewHolder(holder: AveViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AvesViewHolder, position: Int) {
         holder.bind(list[position])
     }
 

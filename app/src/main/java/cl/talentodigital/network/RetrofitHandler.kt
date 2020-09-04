@@ -1,32 +1,31 @@
 package cl.talentodigital.network
 
-import cl.talentgetAveApiodigital.aves.lista.data.remote.AveApi
+import cl.talentgetAveApiodigital.aves.lista.data.remote.AvesApi
 import com.google.gson.GsonBuilder
-import com.squareup.okhttp.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHandler {
 
-  fun getRetrofit() : Retrofit {
+    fun getRetrofit(): Retrofit {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-        val client = OkHttpClient.Build().addInterceptor(interceptor).build()
+        val client = okhttp3.OkHttpClient.Builder().addInterceptor(interceptor).build()
         val gson = GsonBuilder()
             .setLenient()
             .create()
 
         return Retrofit.Builder()
-            .baseUrl("https://aves.ninjas.cl/api/birds")
+            .baseUrl("https://aves.ninjas.cl/api/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
-           // .addCallAdapterFactory()
+            //.addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
 
-    fun getAveApi() : AveApi{
-        return getRetrofit().create(AveApi::class.java)
-    }
+    fun getAveApi() : AvesApi{
+        return getRetrofit().create(AvesApi::class.java)
+        }
 }

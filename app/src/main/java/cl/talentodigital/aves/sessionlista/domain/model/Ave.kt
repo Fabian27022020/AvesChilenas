@@ -1,8 +1,8 @@
 package cl.talentodigital.aves.sessionlista.domain.model
 
 data class Ave (
-    val uid : String,
-    val name : Name,
-    val images : Images,
-    val  sort : Int
+    val uid : String? = null,
+    val name : Name? = null,
+    val images : Images? = null,
+    val  sort : Int? = null
 )

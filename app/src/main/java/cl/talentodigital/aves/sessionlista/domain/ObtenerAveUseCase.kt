@@ -1,10 +1,10 @@
 package cl.talentodigital.aves.sessionlista.domain
 
 class ObtenerAveUseCase(
-    private val repository: AveRepository
+    private val repository: AvesRepository
 ) {
 
-    suspend fun excecute() = repository.getAves()
+    suspend fun excecute() = repository.obtenerAves()
 
 
 }

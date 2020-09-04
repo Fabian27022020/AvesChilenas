@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import cl.talentodigital.aves.sessionlista.domain.ObtenerAveUseCase
 
-class AveViewModelFactory (
+class AvesViewModelFactory (
     private val aveUseCase : ObtenerAveUseCase
 ) : ViewModelProvider.Factory{
 

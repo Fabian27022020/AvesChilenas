@@ -7,17 +7,27 @@
     <fragment
         android:id="@+id/loginUsuarioFragment"
         android:name="cl.talentodigital.aves.login.presentation.LoginUsuarioFragment"
-        android:label="LoginUsuarioFragment" >
+        android:label="LoginUsuarioFragment"
+        tools:layout="@layout/fragment_login_usuario">
         <action
             android:id="@+id/action_loginUsuarioFragment_to_registroUsuarioFragment2"
             app:destination="@id/registroUsuarioFragment" />
+        <action
+            android:id="@+id/action_loginUsuarioFragment_to_avesFragment"
+            app:destination="@id/avesFragment" />
     </fragment>
     <fragment
         android:id="@+id/registroUsuarioFragment"
         android:name="cl.talentodigital.aves.registro.presentation.RegistroUsuarioFragment"
-        android:label="RegistroUsuarioFragment" >
+        android:label="RegistroUsuarioFragment"
+        tools:layout="@layout/fragment_registro_usuario">
         <action
             android:id="@+id/action_registroUsuarioFragment_to_loginUsuarioFragment3"
             app:destination="@id/loginUsuarioFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/avesFragment"
+        android:name="cl.talentodigital.aves.sessionlista.presentation.AvesFragment"
+        android:label="AvesFragment"
+        tools:layout="@layout/fragment_aves"/>
 </navigation>
