@@ -1,4 +1,4 @@
-package cl.talentodigital.aves.lista.domain.model
+package cl.talentodigital.aves.sessionlista.domain.model
 
 data class Ave (
     val uid : String,

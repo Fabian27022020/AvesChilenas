@@ -10,9 +10,10 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minWidth="150dp"
-        android:minHeight="250dp"
-        android:layout_marginTop="50dp"/>
+        android:minWidth="100dp"
+        android:minHeight="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher"/>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_email"
@@ -41,7 +42,8 @@
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/entrar" />
+            android:text="@string/iniciar_sesion"
+            android:textAllCaps="false"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_Registro"
@@ -49,7 +51,8 @@
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/registro" />
+            android:text="@string/registro"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 </LinearLayout>

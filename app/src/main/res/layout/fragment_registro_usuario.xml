@@ -12,7 +12,7 @@
         android:id="@+id/et_Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:maxLines="1"
         android:inputType="text"
         android:contentDescription="@string/ingresar_nombre"
@@ -24,17 +24,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:inputType="text"
-        android:contentDescription="@string/ingresar_rut"
-        android:hint="@string/ingresar_rut" />
+        android:contentDescription="@string/ingresarRut"
+        android:hint="@string/ingresarRut" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_telefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:inputType="number"
         android:contentDescription="@string/ingresar_telefono"
         android:hint="@string/ingresar_telefono"
@@ -46,7 +46,7 @@
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:maxLines="1"
         android:inputType="textEmailAddress"
         android:contentDescription="@string/ingresar_email"
@@ -57,7 +57,7 @@
         android:id="@+id/et_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:maxLines="1"
         android:inputType="textPassword"
         android:contentDescription="@string/ingresar_password"
@@ -68,11 +68,11 @@
         android:id="@+id/et_confirme_pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:maxLines="1"
         android:inputType="textPassword"
-        android:contentDescription="@string/confirme_password"
-        android:hint="@string/confirme_password"
+        android:contentDescription="@string/confirme_contrasena"
+        android:hint="@string/confirme_contrasena"
         />
 
 
@@ -87,7 +87,8 @@
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/registrarse" />
+            android:text="@string/registrarse"
+            android:textAllCaps="false"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_volver"
@@ -95,7 +96,8 @@
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/volver" />
+            android:text="@string/volver"
+            android:textAllCaps="false"/>
     </LinearLayout>
 
 

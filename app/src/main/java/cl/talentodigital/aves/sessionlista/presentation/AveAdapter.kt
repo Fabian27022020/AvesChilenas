@@ -1,11 +1,11 @@
-package cl.talentodigital.aves.lista.presentation
+package cl.talentodigital.aves.sessionlista.presentation
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import cl.talentodigital.aves.R
-import cl.talentodigital.aves.lista.domain.model.Ave
+import cl.talentodigital.aves.sessionlista.domain.model.Ave
 
 
 class AveAdapter (

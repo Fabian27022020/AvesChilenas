@@ -1,17 +1,18 @@
 <resources>
-    <string name="app_name">Aves</string>
-    <string name="ingresar_nombre">ingresar nombre</string>
-    <string name="ingresar_rut">ingresar_rut</string>
-    <string name="ingresar_email">Ingresar Email</string>
-    <string name="ingresar_password">Ingresar Contraseña</string>
-    <string name="registrarse">Registrarse</string>
-    <string name="volver">Volver</string>
-    <string name="confirme_password">confirme_password</string>
-    <string name="ingresar_telefono">ingresar_telefono</string>
-    <string name="ingrese_nombre">ingrese nombre</string>
-    <string name="ingrese_password">ingrese password</string>
-    <string name="entrar">entrar</string>
-    <string name="registro">registro</string>
-    <string name="nombre_ave">nombre ave</string>
-    <string name="link">Link</string>
+<string name="app_name">Aves Chilenas</string>
+<string name="ingresar_nombre">ingresar nombre</string>
+<string name="ingresarRut">ingresar rut</string>
+<string name="ingresar_email">ingresar email</string>
+<string name="ingresar_password">ingrese contraseña</string>
+<string name="registrarse">Registrarse</string>
+<string name="volver">Volver</string>
+<string name="Confirme_password">confirme password</string>
+<string name="ingresar_telefono">ingresar telefono</string>
+<string name="ingrese_nombre">ingrese nombre</string>
+<string name="ingrese_password">ingrese password</string>
+<string name="iniciar_sesion">Iniciar sesion</string>
+<string name="registro">Crear cuenta</string>
+<string name="nombre_ave">nombre ave</string>
+<string name="link">Link</string>
+<string name="confirme_contrasena">confirme contraseña</string>
 </resources>

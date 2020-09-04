@@ -1,6 +1,6 @@
-package cl.talentodigital.aves.lista.domain
+package cl.talentodigital.aves.sessionlista.domain
 
-class AveUseCase(
+class ObtenerAveUseCase(
     private val repository: AveRepository
 ) {
 

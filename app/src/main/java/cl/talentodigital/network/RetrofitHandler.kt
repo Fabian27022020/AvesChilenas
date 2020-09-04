@@ -9,11 +9,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitHandler {
 
-    fun getRetrofit() : Retrofit {
+  fun getRetrofit() : Retrofit {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
+        val client = OkHttpClient.Build().addInterceptor(interceptor).build()
         val gson = GsonBuilder()
             .setLenient()
             .create()
@@ -22,7 +22,7 @@ object RetrofitHandler {
             .baseUrl("https://aves.ninjas.cl/api/birds")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
-            .addCallAdapterFactory()
+           // .addCallAdapterFactory()
             .build()
     }
 
