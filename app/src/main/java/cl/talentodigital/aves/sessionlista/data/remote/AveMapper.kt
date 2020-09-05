@@ -6,7 +6,7 @@ class AveMapper {
 
     fun mapToEntity(aveModel: AveModel) : Ave {
         aveModel.apply {
-            return Ave(uid, name, images, sort)
+            return Ave(uid, nameAves, imagesAves, sort)
         }
     }
 }

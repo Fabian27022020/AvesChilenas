@@ -1,6 +1,6 @@
-package cl.talentgetAveApiodigital.aves.lista.data.remote
+package cl.talentodigital.aves.sessionlista.data.remote
 
-import cl.talentodigital.aves.sessionlista.data.remote.AvesModel
+
 import retrofit2.http.GET
 
 interface AvesApi {

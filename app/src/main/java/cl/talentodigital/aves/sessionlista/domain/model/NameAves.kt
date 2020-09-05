@@ -1,6 +1,6 @@
 package cl.talentodigital.aves.sessionlista.domain.model
 
-data class Name (
+data class NameAves (
 
     val spanish : String,
     val english : String,

@@ -84,7 +84,7 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario) {
                 viewModel.doLogin("juanPerez@gmail.com", "123456")
             }
             btnRegistro.setOnClickListener {
-               Navigation.findNavController(it).navigate(R.id.action_registroUsuarioFragment_to_loginUsuarioFragment3)
+               Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_registroUsuarioFragment2)
             }
         }
 

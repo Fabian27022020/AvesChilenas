@@ -1,7 +1,8 @@
 package cl.talentodigital.network
 
-import cl.talentgetAveApiodigital.aves.lista.data.remote.AvesApi
+import cl.talentodigital.aves.sessionlista.data.remote.AvesApi
 import com.google.gson.GsonBuilder
+import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,7 +13,7 @@ object RetrofitHandler {
         val interceptor = HttpLoggingInterceptor()
         interceptor.level = HttpLoggingInterceptor.Level.BODY
 
-        val client = okhttp3.OkHttpClient.Builder().addInterceptor(interceptor).build()
+        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
         val gson = GsonBuilder()
             .setLenient()
             .create()
@@ -25,7 +26,7 @@ object RetrofitHandler {
             .build()
     }
 
-    fun getAveApi() : AvesApi{
+    fun getAveApi() : AvesApi {
         return getRetrofit().create(AvesApi::class.java)
         }
 }

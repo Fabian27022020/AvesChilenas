@@ -11,7 +11,7 @@ class AvesViewHolder (itemView : View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(ave: Ave) {
         binding.apply {
-                tvNombreAve.text = ave.name.toString()
+                tvNombreAve.text = ave.nameAves.toString()
               //  tvLink.text = ave.links.
         }
     }

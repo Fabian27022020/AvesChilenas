@@ -42,7 +42,7 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
             )
         )
 
-        ViewModel = ViewModelProvider(this, viewModelFactory).get(AvesViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(AvesViewModel::class.java)
     }
 
     private fun setupLiveData() {
