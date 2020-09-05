@@ -1,10 +1,7 @@
 package cl.talentodigital.aves.utils.extension
 
 import androidx.appcompat.widget.AppCompatEditText
-import cl.talentodigital.aves.utils.validator.EmailValidator
-import cl.talentodigital.aves.utils.validator.NameValidator
-import cl.talentodigital.aves.utils.validator.PassValidator
-import cl.talentodigital.aves.utils.validator.RutValidator
+import cl.talentodigital.aves.utils.validator.*
 
 
 fun AppCompatEditText.isValidNameInput(message: String) : Boolean{
@@ -19,6 +16,16 @@ fun AppCompatEditText.isValidNameInput(message: String) : Boolean{
 fun AppCompatEditText.isValidRutInput(message: String) : Boolean{
     val result = RutValidator.validate(text.toString())
     if(!result){
+        error = message
+        requestFocus()
+    }
+    return result
+}
+
+
+fun AppCompatEditText.isValidTelefonoInput(message : String) : Boolean{
+    val  result = PhoneNumberValidator.validatePhone(text.toString())
+    if (!result){
         error = message
         requestFocus()
     }

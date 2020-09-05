@@ -20,14 +20,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:contentDescription="@string/ingrese_nombre"
-        android:hint="@string/ingrese_nombre" />
+        android:contentDescription="@string/ingrese_email"
+        android:hint="@string/ingrese_email" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_clave"
         android:layout_width="match_parent"
         android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
+        android:inputType="textPassword"
         android:contentDescription="@string/ingrese_password"
         android:hint="@string/ingresar_password" />
 

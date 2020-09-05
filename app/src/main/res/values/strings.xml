@@ -2,13 +2,13 @@
 <string name="app_name">Aves Chilenas</string>
 <string name="ingresar_nombre">ingresar nombre</string>
 <string name="ingresarRut">ingresar rut</string>
-<string name="ingresar_email">ingresar email</string>
+<string name="ingresar_email">ingresar e-mail</string>
 <string name="ingresar_password">ingrese contraseña</string>
 <string name="registrarse">Registrarse</string>
 <string name="volver">Volver</string>
 <string name="Confirme_password">confirme password</string>
 <string name="ingresar_telefono">ingresar telefono</string>
-<string name="ingrese_nombre">ingrese nombre</string>
+<string name="ingrese_email">ingrese e-mail</string>
 <string name="ingrese_password">ingrese password</string>
 <string name="iniciar_sesion">Iniciar sesion</string>
 <string name="registro">Crear cuenta</string>

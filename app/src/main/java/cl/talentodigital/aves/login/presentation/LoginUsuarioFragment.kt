@@ -66,22 +66,22 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario) {
     }
 
     private fun showSuccess() {
-        alert("Login Exitoso")
+        alert("Login exitoso")
     }
 
     private fun showInvalid() {
-        alert("Usuario Invalido")
+        alert("Usuario invalido")
    }
 
     private fun showError() {
-        alert("Ha ocurrido un Error")
+        alert("Ha ocurrido un error")
 
     }
 
     private fun setupListener() {
         binding.apply {
             btnLogin.setOnClickListener {
-                viewModel.doLogin("juanPerez@gmail.com", "123456")
+                Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_avesFragment)
             }
             btnRegistro.setOnClickListener {
                Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_registroUsuarioFragment2)

@@ -70,7 +70,7 @@ class RegistroUsuarioFragment : Fragment(R.layout.fragment_registro_usuario) {
     }
 
     private fun showError() {
-        alert("Lo sentimos ha ocurrido un Error")
+        alert("Lo sentimos ha ocurrido un error")
     }
 
     private fun setupListener() {
@@ -88,10 +88,11 @@ class RegistroUsuarioFragment : Fragment(R.layout.fragment_registro_usuario) {
 
     private fun isAllValidinput(): Boolean {
         binding.apply {
-            return etPass.isValidPassInput("ingrese contraseña con 6 caracteres")||
-            return etEmail.isValidEmailInput("ingrese email valido")||
-            return etRut.isValidRutInput("ingrese rut valido")||
-            return etNombre.isValidNameInput("ingrese un nombre valido")
+            return etPass.isValidPassInput("ingrese contraseña con minimo 6 caracteres")||
+            return etEmail.isValidEmailInput("ingrese email válido")||
+            return etTelefono.isValidTelefonoInput("ingrese un numero de telefono válido")||
+            return etRut.isValidRutInput("ingrese rut válido sin puntos y con guión")||
+            return etNombre.isValidNameInput("ingrese nombre y apellido válido")
         }
     }
 

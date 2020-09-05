@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import cl.talentodigital.aves.sessionlista.domain.ObtenerAveUseCase
 import cl.talentodigital.aves.sessionlista.domain.model.Aves
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import kotlinx.coroutines.launch
 
 class AvesViewModel(
@@ -34,7 +33,7 @@ class AvesViewModel(
     private fun handlerResponse(response: Aves) {
             response.result.let{
                 if (it.isNotEmpty()){
-                    liveData.postValue(AvesUiState.LoadAvesState(response))
+                    liveData.postValue(AvesUiState.SuccessAvesState(response))
                 }else{
                     liveData.postValue(AvesUiState.EmptyListAvesState)
                 }
