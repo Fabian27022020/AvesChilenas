@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface AvesApi {
     @GET("birds")
-    suspend fun getAveApi() : AvesModel
+    suspend fun getAveApi() : List<AveModel>
 }

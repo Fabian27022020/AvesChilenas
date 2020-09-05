@@ -11,7 +11,7 @@ class RemoteAvesRepository(
         val aves  = avesApi.getAveApi()
 
         val listaTrasformada =
-            aves.aves?.map { aveMapper.mapToEntity(it) } ?: emptyList()
+            aves.map { aveMapper.mapToEntity(it) } ?: emptyList()
 
         return Aves(listaTrasformada)
     }

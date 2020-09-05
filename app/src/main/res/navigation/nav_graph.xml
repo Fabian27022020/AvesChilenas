@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginUsuarioFragment">
+    app:startDestination="@id/avesFragment">
     <fragment
         android:id="@+id/loginUsuarioFragment"
         android:name="cl.talentodigital.aves.login.presentation.LoginUsuarioFragment"

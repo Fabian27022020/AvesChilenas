@@ -36,7 +36,7 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
         binding = FragmentAvesBinding.bind(view)
         setupLiveData()
         setupRecyclerView(view)
-        setupUseCase()
+
 
 
 
@@ -107,25 +107,8 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
                 )
             )
         }
-
-
     }
 
-    @SuppressLint("CheckBirds")
-    private suspend fun setupUseCase() {
-        val repository = RemoteAvesRepository(RetrofitHandler.getAveApi())
-        obtenerAveUseCase = ObtenerAveUseCase(repository)
-        obtenerAveUseCase
-            .excecute()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({ result ->
-                handleResult(result)
-            }, { error ->
-                handleError(error)
-            })
-
-    }
     private fun handleResult(aves: List<Ave>) {
         binding.apply {
             avesAdapter = AvesAdapter(aves)
@@ -138,6 +121,5 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
         Toast.makeText(context, "esto es un error", Toast.LENGTH_SHORT).show()
 
     }
-
 
 }
