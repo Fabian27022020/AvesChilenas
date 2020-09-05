@@ -1,6 +1,5 @@
-package cl.talentodigital.aves.sessionlista.presentation
+package cl.talentodigital.aves.sessionlista.presentation.ui
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -16,17 +15,16 @@ import cl.talentodigital.aves.sessionlista.data.remote.RemoteAvesRepository
 import cl.talentodigital.aves.sessionlista.domain.ObtenerAveUseCase
 import cl.talentodigital.aves.sessionlista.domain.model.Ave
 import cl.talentodigital.aves.sessionlista.domain.model.Aves
+import cl.talentodigital.aves.sessionlista.presentation.AvesUiState
+import cl.talentodigital.aves.sessionlista.presentation.AvesViewModel
+import cl.talentodigital.aves.sessionlista.presentation.AvesViewModelFactory
 import cl.talentodigital.network.RetrofitHandler
-import com.google.gson.annotations.SerializedName
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
 class AvesFragment : Fragment(R.layout.fragment_aves) {
 
     private lateinit var binding: FragmentAvesBinding
     private lateinit var viewModel: AvesViewModel
     private lateinit var viewModelFactory: AvesViewModelFactory
-    private lateinit var obtenerAveUseCase: ObtenerAveUseCase
     private lateinit var avesAdapter: AvesAdapter
 
 
@@ -37,20 +35,18 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
         setupLiveData()
         setupRecyclerView(view)
 
-
-
-
     }
 
     private fun setupDependencies() {
-        viewModelFactory = AvesViewModelFactory(
-            ObtenerAveUseCase(
-                RemoteAvesRepository(
-                    RetrofitHandler.getAveApi(),
-                    AveMapper()
+        viewModelFactory =
+            AvesViewModelFactory(
+                ObtenerAveUseCase(
+                    RemoteAvesRepository(
+                        RetrofitHandler.getAveApi(),
+                        AveMapper()
+                    )
                 )
             )
-        )
 
         viewModel = ViewModelProvider(this, viewModelFactory).get(AvesViewModel::class.java)
     }
@@ -81,7 +77,9 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
 
     private fun showLoad(aves: Aves) {
         Toast.makeText(context, "total de aves ${aves.result.size}", Toast.LENGTH_SHORT).show()
-
+        avesAdapter =
+            AvesAdapter(aves.result)
+        binding.rvAves.adapter = avesAdapter
     }
 
     private fun showEmpty() {
@@ -98,28 +96,13 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
         binding.apply {
             rvAves.setHasFixedSize(true)
             rvAves.layoutManager = LinearLayoutManager(
-                requireContext()
-            )
-            rvAves.addItemDecoration(
+                requireContext())
+           rvAves.addItemDecoration(
                 DividerItemDecoration(
                     requireContext(),
-                    DividerItemDecoration.VERTICAL
-                )
-            )
+                    DividerItemDecoration.VERTICAL))
+
         }
-    }
-
-    private fun handleResult(aves: List<Ave>) {
-        binding.apply {
-            avesAdapter = AvesAdapter(aves)
-            rvAves.adapter = avesAdapter
-        }
-
-    }
-
-    private fun handleError(error: Throwable) {
-        Toast.makeText(context, "esto es un error", Toast.LENGTH_SHORT).show()
-
     }
 
 }

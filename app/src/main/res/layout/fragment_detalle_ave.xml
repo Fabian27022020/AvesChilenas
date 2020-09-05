@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="5sp"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_nombre_espanol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="nombre en español"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_imagen_ave"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_imagen_ave"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_marginTop="48dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_espanol" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_nombre_en_ingles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_en_ingles"
+        android:layout_marginStart="50dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_espanol" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_nombre_en_latin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre_en_latin"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_espanol" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descripcion"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_imagen_ave"
+        app:layout_constraintTop_toBottomOf="@+id/iv_imagen_ave" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ir_a_habitad"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/custom_button"
+        android:text="@string/conocer_su_habitat"
+        android:textAllCaps="false"
+        android:textColor="#FDFDFD"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/iv_imagen_ave"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descripcion" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sonido_ave"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button"
+        android:text="@string/escuchar_sonido"
+        android:textAllCaps="false"
+        android:textColor="#FDFDFD"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="475dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

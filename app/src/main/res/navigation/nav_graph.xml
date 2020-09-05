@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/avesFragment">
+    app:startDestination="@id/loginUsuarioFragment">
     <fragment
         android:id="@+id/loginUsuarioFragment"
         android:name="cl.talentodigital.aves.login.presentation.LoginUsuarioFragment"
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/avesFragment"
-        android:name="cl.talentodigital.aves.sessionlista.presentation.AvesFragment"
+        android:name="cl.talentodigital.aves.sessionlista.presentation.ui.AvesFragment"
         android:label="AvesFragment"
         tools:layout="@layout/fragment_aves"/>
 </navigation>

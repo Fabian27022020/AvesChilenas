@@ -1,4 +1,4 @@
-package cl.talentodigital.aves.sessionlista.presentation
+package cl.talentodigital.aves.sessionlista.presentation.ui
 
 import android.view.LayoutInflater
 import android.view.View
