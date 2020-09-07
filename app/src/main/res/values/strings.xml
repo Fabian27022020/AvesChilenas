@@ -19,8 +19,11 @@
     <string name="nombre_en_espa_ol">nombre en español</string>
     <string name="nombre_en_ingles">nombre en ingles</string>
     <string name="conocer_su_habitat">conocer su habitat</string>
-    <string name="escuchar_sonido">escuchar sonido</string>
+    <string name="escuchar_canto_del_ave">Escuchar canto del ave</string>
     <string name="nombre_de_ave_chilena">Nombre de Ave Chilena</string>
     <string name="nombre_en_latin">nombre en latin</string>
     <string name="descripcion">descripcion</string>
+    <string name="sort">sort</string>
+    <string name="bienvenidos">Bienvenidos</string>
+    <string name="ir_a_lista_de_aves">Ir a lista de aves</string>
 </resources>

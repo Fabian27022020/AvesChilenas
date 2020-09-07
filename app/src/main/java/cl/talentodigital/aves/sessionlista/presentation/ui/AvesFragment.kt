@@ -20,7 +20,7 @@ import cl.talentodigital.aves.sessionlista.presentation.AvesViewModel
 import cl.talentodigital.aves.sessionlista.presentation.AvesViewModelFactory
 import cl.talentodigital.network.RetrofitHandler
 
-class AvesFragment : Fragment(R.layout.fragment_aves) {
+class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
 
     private lateinit var binding: FragmentAvesBinding
     private lateinit var viewModel: AvesViewModel
@@ -33,7 +33,8 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
         setupDependencies()
         binding = FragmentAvesBinding.bind(view)
         setupLiveData()
-        setupRecyclerView(view)
+        setupRecyclerView()
+        setupListener()
 
     }
 
@@ -78,7 +79,7 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
     private fun showLoad(aves: Aves) {
         Toast.makeText(context, "total de aves ${aves.result.size}", Toast.LENGTH_SHORT).show()
         avesAdapter =
-            AvesAdapter(aves.result)
+            AvesAdapter(aves.result,this)
         binding.rvAves.adapter = avesAdapter
     }
 
@@ -92,7 +93,7 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
     private fun showNotInternet() {
     }
 
-    private fun setupRecyclerView(view: View) {
+    private fun setupRecyclerView() {
         binding.apply {
             rvAves.setHasFixedSize(true)
             rvAves.layoutManager = LinearLayoutManager(
@@ -104,5 +105,13 @@ class AvesFragment : Fragment(R.layout.fragment_aves) {
 
         }
     }
+    private fun setupListener() {
+
+    }
+
+    override fun onAvesItemClickListener(ave: Ave) {
+        Toast.makeText(context,ave.uid, Toast.LENGTH_SHORT).show()
+    }
+
 
 }

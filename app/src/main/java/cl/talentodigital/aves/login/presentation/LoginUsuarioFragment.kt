@@ -2,6 +2,7 @@ package cl.talentodigital.aves.login.presentation
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -12,10 +13,12 @@ import cl.talentodigital.aves.databinding.FragmentRegistroUsuarioBinding
 import cl.talentodigital.aves.login.data.remote.FirebaseLoginUsuarioRepository
 import cl.talentodigital.aves.login.domain.LoginUsuarioRepository
 import cl.talentodigital.aves.login.domain.LoginUsuarioUseCase
+import cl.talentodigital.aves.sessionlista.domain.model.Ave
+import cl.talentodigital.aves.sessionlista.presentation.ui.AvesItemClickListener
 import cl.talentodigital.aves.utils.extension.alert
 import com.google.firebase.auth.FirebaseAuth
 
-class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario) {
+class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemClickListener {
 
     private lateinit var binding: FragmentLoginUsuarioBinding
     private lateinit var repository: LoginUsuarioRepository
@@ -81,13 +84,18 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario) {
     private fun setupListener() {
         binding.apply {
             btnLogin.setOnClickListener {
-                Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_avesFragment)
+                Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_splashFragment)
             }
             btnRegistro.setOnClickListener {
                Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_registroUsuarioFragment2)
             }
         }
 
+
+    }
+
+    override fun onAvesItemClickListener(ave: Ave) {
+        Toast.makeText(requireContext(),ave.uid,  Toast.LENGTH_SHORT).show()
 
     }
 }

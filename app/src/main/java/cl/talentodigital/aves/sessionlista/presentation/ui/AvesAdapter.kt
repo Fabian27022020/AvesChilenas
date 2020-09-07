@@ -9,14 +9,14 @@ import cl.talentodigital.aves.sessionlista.domain.model.Ave
 
 
 class AvesAdapter (
-    private val list: List<Ave>
+    private val list: List<Ave>,private val avesItemClickListener: AvesItemClickListener
 ) : RecyclerView.Adapter<AvesViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AvesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view : View = inflater.inflate(R.layout.aves_item, parent, false)
-        return AvesViewHolder(view)
+        return AvesViewHolder(view,avesItemClickListener )
     }
 
     override fun getItemCount(): Int {
