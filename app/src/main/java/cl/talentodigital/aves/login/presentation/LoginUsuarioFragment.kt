@@ -94,7 +94,7 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemC
 
     }
 
-    override fun onAvesItemClickListener(ave: Ave) {
+    override fun onAvesItemClickListener(view: View, ave: Ave) {
         Toast.makeText(requireContext(),ave.uid,  Toast.LENGTH_SHORT).show()
 
     }

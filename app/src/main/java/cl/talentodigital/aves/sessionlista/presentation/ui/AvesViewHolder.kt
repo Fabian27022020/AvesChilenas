@@ -1,7 +1,9 @@
 package cl.talentodigital.aves.sessionlista.presentation.ui
 
 import android.view.View
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
+import cl.talentodigital.aves.R
 import cl.talentodigital.aves.databinding.AvesItemBinding
 import cl.talentodigital.aves.sessionlista.domain.model.Ave
 import com.squareup.picasso.Picasso
@@ -12,10 +14,12 @@ class AvesViewHolder (itemView : View, private val avesItemClickListener: AvesIt
 
     fun bind(ave: Ave) {
         binding.apply {
-            Picasso.get().load(ave.images.toString()).into(binding.ivImageView)
-            tvUid.text.toString()
-            tvSort.text.toString()
-            cvItemAves.setOnClickListener { avesItemClickListener?. onAvesItemClickListener(ave) }
+            Picasso.get().load(ave.images?.url).into(binding.ivImageView)
+            tvName.text= ave.name?.spanish
+            cvItemAves.setOnClickListener{
+                Navigation.findNavController(it).navigate(R.id.action_avesFragment_to_detalleAvesFragment)
+            }
+
         }
 
 

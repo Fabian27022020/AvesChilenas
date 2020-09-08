@@ -26,4 +26,5 @@
     <string name="sort">sort</string>
     <string name="bienvenidos">Bienvenidos</string>
     <string name="ir_a_lista_de_aves">Ir a lista de aves</string>
+    <string name="name">name</string>
 </resources>

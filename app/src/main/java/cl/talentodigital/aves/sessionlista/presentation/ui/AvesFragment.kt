@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import cl.talentodigital.aves.R
@@ -34,8 +35,6 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
         binding = FragmentAvesBinding.bind(view)
         setupLiveData()
         setupRecyclerView()
-        setupListener()
-
     }
 
     private fun setupDependencies() {
@@ -68,7 +67,6 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
             is AvesUiState.ErrorServerAvesState -> showError()
             is AvesUiState.NotInternetAvesState -> showNotInternet()
         }
-
 
     }
 
@@ -105,12 +103,9 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
 
         }
     }
-    private fun setupListener() {
 
-    }
-
-    override fun onAvesItemClickListener(ave: Ave) {
-        Toast.makeText(context,ave.uid, Toast.LENGTH_SHORT).show()
+    override fun onAvesItemClickListener(view: View, ave: Ave) {
+        Navigation.findNavController(view).navigate(R.id.action_avesFragment_to_detalleAvesFragment)
     }
 
 

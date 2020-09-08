@@ -29,7 +29,11 @@
         android:id="@+id/avesFragment"
         android:name="cl.talentodigital.aves.sessionlista.presentation.ui.AvesFragment"
         android:label="AvesFragment"
-        tools:layout="@layout/fragment_aves"/>
+        tools:layout="@layout/fragment_aves">
+        <action
+            android:id="@+id/action_avesFragment_to_detalleAvesFragment"
+            app:destination="@id/detalleAvesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/splashFragment"
         android:name="cl.talentodigital.aves.splash.presentation.SplashFragment"
@@ -39,4 +43,9 @@
             android:id="@+id/action_splashFragment_to_avesFragment"
             app:destination="@id/avesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/detalleAvesFragment"
+        android:name="cl.talentodigital.aves.detalle.presentation.DetalleAvesFragment"
+        android:label="DetalleAvesFragment"
+        tools:layout="@layout/fragment_detalle_ave"/>
 </navigation>
