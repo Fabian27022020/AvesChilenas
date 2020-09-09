@@ -14,7 +14,7 @@ class AvesViewHolder (itemView : View, private val avesItemClickListener: AvesIt
 
     fun bind(ave: Ave) {
         binding.apply {
-            Picasso.get().load(ave.images?.url).into(binding.ivImageView)
+            Picasso.get().load(ave.images?.url).into(binding.ivImageAve)
             tvName.text= ave.name?.spanish
             cvItemAves.setOnClickListener{
                 Navigation.findNavController(it).navigate(R.id.action_avesFragment_to_detalleAvesFragment)

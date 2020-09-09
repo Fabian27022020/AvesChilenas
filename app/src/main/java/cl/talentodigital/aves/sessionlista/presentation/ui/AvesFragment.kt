@@ -3,6 +3,7 @@ package cl.talentodigital.aves.sessionlista.presentation.ui
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -23,10 +24,12 @@ import cl.talentodigital.network.RetrofitHandler
 
 class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
 
+
     private lateinit var binding: FragmentAvesBinding
     private lateinit var viewModel: AvesViewModel
     private lateinit var viewModelFactory: AvesViewModelFactory
     private lateinit var avesAdapter: AvesAdapter
+    val AVATAR_URL_PARAM = "url_param"
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -105,7 +108,8 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
     }
 
     override fun onAvesItemClickListener(view: View, ave: Ave) {
-        Navigation.findNavController(view).navigate(R.id.action_avesFragment_to_detalleAvesFragment)
+        val bundle = bundleOf("url_param" to AVATAR_URL_PARAM)
+        Navigation.findNavController(view).navigate(R.id.action_avesFragment_to_detalleAvesFragment,bundle)
     }
 
 

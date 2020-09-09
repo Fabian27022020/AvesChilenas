@@ -3,11 +3,89 @@ package cl.talentodigital.aves.detalle.presentation
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import cl.talentodigital.aves.R
 
-class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave){
+import cl.talentodigital.aves.databinding.FragmentDetalleAveBinding
+import cl.talentodigital.aves.detalle.data.remote.DetalleAveMapper
+import cl.talentodigital.aves.detalle.data.remote.RemoteDetalleAveRepository
+import cl.talentodigital.aves.detalle.domain.DetalleAveUseCase
+import cl.talentodigital.aves.detalle.domain.model.DetalleAve
+import cl.talentodigital.network.RetrofitHandler
+
+
+class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
+
+    private lateinit var binding: FragmentDetalleAveBinding
+    private lateinit var viewModel: DetalleAveViewModel
+    private lateinit var viewModelFactory: DetalleAveViewModelFactory
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupDependencies()
+        binding = FragmentDetalleAveBinding.bind(view)
+        setupLiveData()
     }
+    
+    private fun setupDependencies() {
+        viewModelFactory = 
+            DetalleAveViewModelFactory(
+                DetalleAveUseCase(
+                    RemoteDetalleAveRepository(
+                        RetrofitHandler.getDetalleApi(),
+                        DetalleAveMapper()
+                    )
+                )
+            )
+        viewModel = ViewModelProvider(this,viewModelFactory).get(DetalleAveViewModel::class.java)
+    }
+    
+    private fun setupLiveData() {
+        viewModel.getLiveData().observe(
+            viewLifecycleOwner,
+            Observer { state -> state?.let { handkeState(it) } }
+        )
+        viewModel.obtenerDetalle()
+
+    }
+
+    private fun handkeState(state: DetalleAveState) {
+        when (state){
+            is DetalleAveState.LoadingDetalleState -> showLoading()
+            is DetalleAveState.SuccessAvesState -> showLoad(state.result)
+            is DetalleAveState.EmptyListAvesState -> showEmpty()
+            is DetalleAveState.ErrorServerAvesState -> showError()
+            is DetalleAveState.NotInternetAvesState -> showNotInternet()
+        }
+        
+    }
+
+    private fun showLoading() {
+        
+        
+    }
+
+    private fun showLoad(result: DetalleAve) {
+        
+        
+    }
+
+    private fun showEmpty() {
+        
+        
+    }
+
+    private fun showError() {
+        
+        
+    }
+
+    private fun showNotInternet() {
+        
+        
+    }
+
+
 }

@@ -1,5 +1,6 @@
 package cl.talentodigital.network
 
+import cl.talentodigital.aves.detalle.data.remote.DetalleAveApi
 import cl.talentodigital.aves.sessionlista.data.remote.AvesApi
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -29,4 +30,7 @@ object RetrofitHandler {
     fun getAveApi() : AvesApi {
         return getRetrofit().create(AvesApi::class.java)
         }
+    fun getDetalleApi():DetalleAveApi{
+        return getRetrofit().create(DetalleAveApi::class.java)
+    }
 }
