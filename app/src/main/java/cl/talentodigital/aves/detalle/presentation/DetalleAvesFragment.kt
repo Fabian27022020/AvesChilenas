@@ -24,11 +24,23 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+       arguments?.let {
+           safeArguments -> handleParams(safeArguments)
+       }
+
         setupDependencies()
         binding = FragmentDetalleAveBinding.bind(view)
         setupLiveData()
     }
-    
+
+    private fun handleParams(safeBundle : Bundle) {
+        safeBundle.apply {
+            val name = getString("nombre")
+            val habitat = getString("habitat")
+        }
+
+    }
+
     private fun setupDependencies() {
         viewModelFactory = 
             DetalleAveViewModelFactory(

@@ -7,5 +7,9 @@ data class DetalleAve (
     val name : NameAves? = null,
     val map : MapAve? = null,
     val iucn : IucnAve? = null,
-    val species : String? = null
+    val habitat : String? = null,
+    val didyouknow : String? = null,
+    val size : String? = null,
+    val species : String? = null,
+    val audio : Audio? = null
 )

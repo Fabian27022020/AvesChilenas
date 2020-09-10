@@ -12,11 +12,7 @@ class RemoteDetalleAveRepository  (
 
 
     override suspend fun obtenerDetalle(): DetalleAve {
-        val detalleAve = detalleAveApi.getDetalleAveApi()
-        return DetalleAve(detalleAve.uid,
-            detalleAve.name,
-            detalleAve.map,
-            detalleAve.iucn,
-            detalleAve.species)
+        return detalleAveMapper.mapToEntity(detalleAveApi.getDetalleAveApi())
+
     }
 }

@@ -29,7 +29,6 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
     private lateinit var viewModel: AvesViewModel
     private lateinit var viewModelFactory: AvesViewModelFactory
     private lateinit var avesAdapter: AvesAdapter
-    val AVATAR_URL_PARAM = "url_param"
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -108,9 +107,16 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
     }
 
     override fun onAvesItemClickListener(view: View, ave: Ave) {
-        val bundle = bundleOf("url_param" to AVATAR_URL_PARAM)
+        val name = "aveEjemplo"
+        val habitad = "sur de chile"
+        val bundle = Bundle().apply {
+            putString("aveEjemplo", name)
+            putString("sur de chile", habitad)
+        }
         Navigation.findNavController(view).navigate(R.id.action_avesFragment_to_detalleAvesFragment,bundle)
+        }
+
+
     }
 
 
-}

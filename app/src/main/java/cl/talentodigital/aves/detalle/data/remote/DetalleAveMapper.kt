@@ -6,7 +6,8 @@ class DetalleAveMapper {
 
     fun mapToEntity (detalleAveModel: DetalleAveModel): DetalleAve{
      detalleAveModel.apply{
-         return DetalleAve(uid, name, map, iucn,species)
+         return DetalleAve(uid, name, map, iucn,habitat,didyouknow,
+             size,species,audio)
          }    
     }      
 }
