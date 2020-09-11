@@ -1,5 +1,5 @@
 package cl.talentodigital.aves.detalle.domain.model
 
-class Audio (
-    val file : String
+class ImagesDetalle(
+    val main :String
 )

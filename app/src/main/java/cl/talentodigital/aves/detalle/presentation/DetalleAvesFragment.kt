@@ -13,6 +13,7 @@ import cl.talentodigital.aves.detalle.data.remote.RemoteDetalleAveRepository
 import cl.talentodigital.aves.detalle.domain.DetalleAveUseCase
 import cl.talentodigital.aves.detalle.domain.model.DetalleAve
 import cl.talentodigital.network.RetrofitHandler
+import com.squareup.picasso.Picasso
 
 
 class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
@@ -79,9 +80,21 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
         
     }
 
-    private fun showLoad(result: DetalleAve) {
-        
-        
+    private fun showLoad(detalleAve : DetalleAve) {
+        binding.apply {
+            tvNombreEspanol.text = detalleAve.name?.spanish
+            tvNombreEnIngles.text = detalleAve.name?.english
+            tvNombreEnLatin.text = detalleAve.name?.latin
+            tvHabitad.text = detalleAve.habitat
+            tvDidyouknow.text = detalleAve.didyouknow
+            tvSize.text = detalleAve.size
+            tvDescripcion.text = detalleAve.iucn?.description
+            tvSpecies.text = detalleAve.species
+            tvTitle.text = detalleAve.map?.title
+            Picasso.get().load(detalleAve.images?.main).into(binding.ivImagenAve)
+            Picasso.get().load(detalleAve.map?.image).into(binding.ivImagenMapa)
+
+        }
     }
 
     private fun showEmpty() {

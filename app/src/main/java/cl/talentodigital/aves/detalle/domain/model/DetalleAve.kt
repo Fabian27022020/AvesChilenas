@@ -11,5 +11,6 @@ data class DetalleAve (
     val didyouknow : String? = null,
     val size : String? = null,
     val species : String? = null,
-    val audio : Audio? = null
+    val audio : Audio? = null,
+    val images : ImagesDetalle? = null
 )
