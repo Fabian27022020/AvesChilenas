@@ -1,5 +1,7 @@
 package cl.talentodigital.aves.detalle.domain.model
 
-class ImagesDetalle(
+
+
+data class ImagesDetalle(
     val main :String
 )

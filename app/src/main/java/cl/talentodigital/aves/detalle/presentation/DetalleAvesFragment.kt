@@ -25,20 +25,9 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       arguments?.let {
-           safeArguments -> handleParams(safeArguments)
-       }
-
         setupDependencies()
         binding = FragmentDetalleAveBinding.bind(view)
         setupLiveData()
-    }
-
-    private fun handleParams(safeBundle : Bundle) {
-        safeBundle.apply {
-            val name = getString("nombre")
-            val habitat = getString("habitat")
-        }
 
     }
 
@@ -60,7 +49,10 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
             viewLifecycleOwner,
             Observer { state -> state?.let { handkeState(it) } }
         )
-        viewModel.obtenerDetalle()
+        val uid = arguments?.getString("uid")
+        if (uid != null) {
+            viewModel.obtenerDetalle(uid)
+        }
 
     }
 
@@ -90,11 +82,11 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
             tvSize.text = detalleAve.size
             tvDescripcion.text = detalleAve.iucn?.description
             tvSpecies.text = detalleAve.species
-            tvTitle.text = detalleAve.map?.title
             Picasso.get().load(detalleAve.images?.main).into(binding.ivImagenAve)
-            Picasso.get().load(detalleAve.map?.image).into(binding.ivImagenMapa)
+            tvTitle.text = detalleAve.map?.title
+            Picasso.get().load(detalleAve.map?.image).into(binding.ivFotoMapa)
 
-        }
+         }
     }
 
     private fun showEmpty() {

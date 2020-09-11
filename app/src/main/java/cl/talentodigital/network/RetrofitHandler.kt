@@ -23,7 +23,6 @@ object RetrofitHandler {
             .baseUrl("https://aves.ninjas.cl/api/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
-            //.addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
     }
 

@@ -11,8 +11,8 @@ class RemoteDetalleAveRepository  (
 ): DetalleAveRepository {
 
 
-    override suspend fun obtenerDetalle(): DetalleAve {
-        return detalleAveMapper.mapToEntity(detalleAveApi.getDetalleAveApi())
+    override suspend fun obtenerDetalle(uid : String): DetalleAve {
+        return detalleAveMapper.mapToEntity(detalleAveApi.getDetalleAveApi(uid))
 
     }
 }

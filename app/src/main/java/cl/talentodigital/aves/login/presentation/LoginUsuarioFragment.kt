@@ -18,7 +18,7 @@ import cl.talentodigital.aves.sessionlista.presentation.ui.AvesItemClickListener
 import cl.talentodigital.aves.utils.extension.alert
 import com.google.firebase.auth.FirebaseAuth
 
-class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemClickListener {
+class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario) {
 
     private lateinit var binding: FragmentLoginUsuarioBinding
     private lateinit var repository: LoginUsuarioRepository
@@ -38,7 +38,7 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemC
         repository = FirebaseLoginUsuarioRepository(FirebaseAuth.getInstance())
         viewModelFactory = LoginUsuarioViewModelFactory(LoginUsuarioUseCase(repository))
         viewModel = ViewModelProvider(
-                this,
+            this,
             viewModelFactory
         ).get(LoginUsuarioViewModel::class.java)
 
@@ -46,7 +46,7 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemC
 
     private fun setupLiveData() {
         viewModel.getLiveData().observe(
-        viewLifecycleOwner,
+            viewLifecycleOwner,
             Observer { state -> state?.let { handleState(it) } }
         )
 
@@ -54,7 +54,7 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemC
     }
 
     private fun handleState(state: LoginUsuarioUiState) {
-        when (state){
+        when (state) {
             is LoginUsuarioUiState.Loading -> showLoading()
             is LoginUsuarioUiState.Success -> showSuccess()
             is LoginUsuarioUiState.InvalidUser -> showInvalid()
@@ -74,7 +74,7 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemC
 
     private fun showInvalid() {
         alert("Usuario invalido")
-   }
+    }
 
     private fun showError() {
         alert("Ha ocurrido un error")
@@ -84,18 +84,15 @@ class LoginUsuarioFragment : Fragment(R.layout.fragment_login_usuario),AvesItemC
     private fun setupListener() {
         binding.apply {
             btnLogin.setOnClickListener {
-                Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_splashFragment)
+                Navigation.findNavController(it)
+                    .navigate(R.id.action_loginUsuarioFragment_to_splashFragment)
             }
             btnRegistro.setOnClickListener {
-               Navigation.findNavController(it).navigate(R.id.action_loginUsuarioFragment_to_registroUsuarioFragment2)
+                Navigation.findNavController(it)
+                    .navigate(R.id.action_loginUsuarioFragment_to_registroUsuarioFragment2)
             }
         }
 
-
     }
 
-    override fun onAvesItemClickListener(view: View, ave: Ave) {
-        Toast.makeText(requireContext(),ave.uid,  Toast.LENGTH_SHORT).show()
-
-    }
 }

@@ -1,9 +1,10 @@
 package cl.talentodigital.aves.detalle.data.remote
 
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface DetalleAveApi {
 
-    @GET("birds/76-buteo-albigula")
-    suspend fun getDetalleAveApi() : DetalleAveModel
+    @GET("birds/{uid}")
+    suspend fun getDetalleAveApi(@Path("uid") uid : String) : DetalleAveModel
 }

@@ -4,5 +4,5 @@ import cl.talentodigital.aves.detalle.domain.model.DetalleAve
 
 
 interface DetalleAveRepository {
-    suspend fun obtenerDetalle(): DetalleAve
+    suspend fun obtenerDetalle(uid : String): DetalleAve
 }

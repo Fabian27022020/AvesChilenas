@@ -22,7 +22,7 @@ import cl.talentodigital.aves.sessionlista.presentation.AvesViewModel
 import cl.talentodigital.aves.sessionlista.presentation.AvesViewModelFactory
 import cl.talentodigital.network.RetrofitHandler
 
-class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
+class AvesFragment : Fragment(R.layout.fragment_aves), AvesItemClickListener {
 
 
     private lateinit var binding: FragmentAvesBinding
@@ -79,7 +79,7 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
     private fun showLoad(aves: Aves) {
         Toast.makeText(context, "total de aves ${aves.result.size}", Toast.LENGTH_SHORT).show()
         avesAdapter =
-            AvesAdapter(aves.result,this)
+            AvesAdapter(aves.result, this)
         binding.rvAves.adapter = avesAdapter
     }
 
@@ -97,26 +97,31 @@ class AvesFragment : Fragment(R.layout.fragment_aves),AvesItemClickListener {
         binding.apply {
             rvAves.setHasFixedSize(true)
             rvAves.layoutManager = LinearLayoutManager(
-                requireContext())
-           rvAves.addItemDecoration(
+                requireContext()
+            )
+            rvAves.addItemDecoration(
                 DividerItemDecoration(
                     requireContext(),
-                    DividerItemDecoration.VERTICAL))
+                    DividerItemDecoration.VERTICAL
+                )
+            )
 
         }
     }
 
-    override fun onAvesItemClickListener(view: View, ave: Ave) {
-        val name = "aveEjemplo"
-        val habitad = "sur de chile"
+    override fun onAvesItemClickListener(ave: Ave) {
+
         val bundle = Bundle().apply {
-            putString("aveEjemplo", name)
-            putString("sur de chile", habitad)
-        }
-        Navigation.findNavController(view).navigate(R.id.action_avesFragment_to_detalleAvesFragment,bundle)
-        }
+            putString("uid", ave.uid)
 
-
+        }
+        view?.let {
+            Navigation.findNavController(it)
+                .navigate(R.id.action_avesFragment_to_detalleAvesFragment, bundle)
+        }
     }
+
+
+}
 
 

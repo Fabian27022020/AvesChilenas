@@ -14,11 +14,11 @@ class DetalleAveViewModel (
 
     fun getLiveData() = liveData
 
-    fun obtenerDetalle(){
+    fun obtenerDetalle(uid : String){
         liveData.postValue(DetalleAveState.LoadingDetalleState)
         viewModelScope.launch {
             try {
-                val response = detalleAveUseCase.excecute()
+                val response = detalleAveUseCase.excecute(uid)
                 handleRespose(response)
             }catch (exception : Exception){
                 liveData.postValue(DetalleAveState.ErrorServerAvesState)

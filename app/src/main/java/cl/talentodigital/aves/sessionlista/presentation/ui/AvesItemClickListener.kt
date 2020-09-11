@@ -5,5 +5,5 @@ import cl.talentodigital.aves.sessionlista.domain.model.Ave
 
 interface AvesItemClickListener {
 
-    fun onAvesItemClickListener(view :View, ave: Ave)
+    fun onAvesItemClickListener( ave: Ave)
 }
