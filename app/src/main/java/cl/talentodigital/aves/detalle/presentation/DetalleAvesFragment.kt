@@ -71,6 +71,8 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
 
     private fun showLoading() {
 
+        binding.shimmerCargando.startShimmerAnimation()
+
 
     }
 
@@ -82,12 +84,18 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
             tvHabitad.text = detalleAve.habitat
             tvDidyouknow.text = detalleAve.didyouknow
             tvSize.text = detalleAve.size
-            tvDescripcion.text = detalleAve.iucn?.description
+            if (detalleAve.iucn != null && detalleAve.iucn.description != null){
+                tvDescripcion.text = detalleAve.iucn.description
+            }else{
+                tvDescripcion.visibility = View.GONE
+                tvDescripcions.visibility = View.GONE
+            }
+
             tvSpecies.text = detalleAve.species
             Picasso.get().load(detalleAve.images?.main).into(binding.ivImagenAve)
             tvTitle.text = detalleAve.map?.title
             Picasso.get().load(detalleAve.map?.image).into(binding.ivFotoMapa)
-
+            shimmerCargando.stopShimmerAnimation()
         }
     }
 
