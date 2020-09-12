@@ -17,11 +17,9 @@
 <string name="confirme_contrasena">confirme contraseña</string>
     <string name="uid">uid</string>
     <string name="nombre_en_espa_ol">nombre en español</string>
-    <string name="nombre_en_ingles">nombre en ingles</string>
     <string name="conocer_su_habitat">conocer su habitat</string>
     <string name="nombre_de_ave_chilena">Nombre de Ave Chilena</string>
-    <string name="nombre_en_latin">nombre en latin</string>
-    <string name="descripcion">descripcion</string>
+    <string name="description">descripcion</string>
     <string name="sort">sort</string>
     <string name="bienvenidos">Bienvenidos</string>
     <string name="ir_a_lista_de_aves">Ir a lista de aves</string>
@@ -34,4 +32,9 @@
     <string name="species">species</string>
     <string name="mapa">mapa</string>
     <string name="title">title</string>
+    <string name="nombre_en_ingles">Nombre en ingles</string>
+    <string name="nombre_en_latin">Nombre en latin</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="habitat">Habitat</string>
+
 </resources>

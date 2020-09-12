@@ -9,7 +9,7 @@
     android:elevation="8dp"
     android:layout_margin="5dp"
     android:id="@+id/cv_item_aves"
-    android:background="#0340DA"
+    android:background="#168A37"
     >
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,6 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="@string/name"
+        android:textSize="18dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_imageAve"

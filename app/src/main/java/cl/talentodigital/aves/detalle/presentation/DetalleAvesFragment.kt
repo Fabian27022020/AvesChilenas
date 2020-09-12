@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import cl.talentodigital.aves.R
 
 import cl.talentodigital.aves.databinding.FragmentDetalleAveBinding
@@ -28,11 +29,12 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
         setupDependencies()
         binding = FragmentDetalleAveBinding.bind(view)
         setupLiveData()
+        setupListener()
 
     }
 
     private fun setupDependencies() {
-        viewModelFactory = 
+        viewModelFactory =
             DetalleAveViewModelFactory(
                 DetalleAveUseCase(
                     RemoteDetalleAveRepository(
@@ -41,9 +43,9 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
                     )
                 )
             )
-        viewModel = ViewModelProvider(this,viewModelFactory).get(DetalleAveViewModel::class.java)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(DetalleAveViewModel::class.java)
     }
-    
+
     private fun setupLiveData() {
         viewModel.getLiveData().observe(
             viewLifecycleOwner,
@@ -57,26 +59,26 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
     }
 
     private fun handkeState(state: DetalleAveState) {
-        when (state){
+        when (state) {
             is DetalleAveState.LoadingDetalleState -> showLoading()
             is DetalleAveState.SuccessAvesState -> showLoad(state.result)
             is DetalleAveState.EmptyListAvesState -> showEmpty()
             is DetalleAveState.ErrorServerAvesState -> showError()
             is DetalleAveState.NotInternetAvesState -> showNotInternet()
         }
-        
+
     }
 
     private fun showLoading() {
-        
-        
+
+
     }
 
-    private fun showLoad(detalleAve : DetalleAve) {
+    private fun showLoad(detalleAve: DetalleAve) {
         binding.apply {
             tvNombreEspanol.text = detalleAve.name?.spanish
-            tvNombreEnIngles.text = detalleAve.name?.english
-            tvNombreEnLatin.text = detalleAve.name?.latin
+            tvNameEnIngles.text = detalleAve.name?.english
+            tvNameLatin.text = detalleAve.name?.latin
             tvHabitad.text = detalleAve.habitat
             tvDidyouknow.text = detalleAve.didyouknow
             tvSize.text = detalleAve.size
@@ -86,23 +88,30 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
             tvTitle.text = detalleAve.map?.title
             Picasso.get().load(detalleAve.map?.image).into(binding.ivFotoMapa)
 
-         }
+        }
     }
 
     private fun showEmpty() {
-        
-        
+
+
     }
 
     private fun showError() {
-        
-        
+
+
     }
 
     private fun showNotInternet() {
-        
-        
+
+
     }
 
+    private fun setupListener() {
+        binding.btnSonidoAve.setOnClickListener {
+            binding.btnSonidoAve.text
 
-}
+            }
+
+        }
+
+    }
