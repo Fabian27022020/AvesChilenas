@@ -31,12 +31,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:text="@string/name"
-        android:textSize="18dp"
+        android:textColor="#0F0F10"
+        android:textSize="15dp"
+        android:gravity="center"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_imageAve"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_imageAve"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/iv_imageAve" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

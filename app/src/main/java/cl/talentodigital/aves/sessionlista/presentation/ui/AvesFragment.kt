@@ -79,7 +79,7 @@ class AvesFragment : Fragment(R.layout.fragment_aves), AvesItemClickListener {
     }
 
     private fun showLoad(aves: Aves) {
-        Toast.makeText(context, "total de aves ${aves.result.size}", Toast.LENGTH_SHORT).show()
+   //     Toast.makeText(context, "total de aves ${aves.result.size}", Toast.LENGTH_SHORT).show()
         avesAdapter =
             AvesAdapter(aves.result, this)
         binding.rvAves.adapter = avesAdapter

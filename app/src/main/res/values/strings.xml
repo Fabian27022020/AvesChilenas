@@ -33,8 +33,11 @@
     <string name="nombre_en_ingles">Nombre en ingles</string>
     <string name="nombre_en_latin">Nombre en latin</string>
     <string name="sabias_qu">Sabias qué:</string>
-    <string name="descripcion">Descripcion</string>
-    <string name="habitat">habitat</string>
+    <string name="descripcion">Descripcion:</string>
+    <string name="habitat">Habitat: </string>
+    <string name="tama_o">Tamaño:</string>
+    <string name="especie">Especie:</string>
+    <string name="region_donde_habita">Region donde habita:</string>
 
 
 </resources>

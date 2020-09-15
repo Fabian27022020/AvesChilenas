@@ -29,7 +29,7 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
         setupDependencies()
         binding = FragmentDetalleAveBinding.bind(view)
         setupLiveData()
-        setupListener()
+
 
     }
 
@@ -81,17 +81,33 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
             tvNombreEspanol.text = detalleAve.name?.spanish
             tvNameEnIngles.text = detalleAve.name?.english
             tvNameLatin.text = detalleAve.name?.latin
-            tvHabitad.text = detalleAve.habitat
-            tvDidyouknow.text = detalleAve.didyouknow
-            tvSize.text = detalleAve.size
-            if (detalleAve.iucn != null && detalleAve.iucn.description != null){
-                tvDescripcion.text = detalleAve.iucn.description
+            //    tvHabitad.text = detalleAve.habitat
+            if (detalleAve.habitat != null) {
+                tvHabitad.text = detalleAve.habitat
+            } else {
+                tvHabitad.visibility = View.GONE
+                tvTituloHabitat.visibility = View.GONE
+            }
+
+           // tvDidyouknow.text = detalleAve.didyouknow
+            if (detalleAve.didyouknow != null){
+                tvDidyouknow.text = detalleAve.didyouknow
+
             }else{
+                tvDidyouknow.visibility = View.GONE
+                tvTituloSabiasQue.visibility = View.GONE
+            }
+
+            // DESCRIPCION
+            if (detalleAve.iucn != null && detalleAve.iucn.description != null) {
+                tvDescripcion.text = detalleAve.iucn.description
+            } else {
                 tvDescripcion.visibility = View.GONE
-                tvDescripcions.visibility = View.GONE
+                tvTituloDescripcions.visibility = View.GONE
             }
 
             tvSpecies.text = detalleAve.species
+            tvSize.text = detalleAve.size
             Picasso.get().load(detalleAve.images?.main).into(binding.ivImagenAve)
             tvTitle.text = detalleAve.map?.title
             Picasso.get().load(detalleAve.map?.image).into(binding.ivFotoMapa)
@@ -114,12 +130,5 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
 
     }
 
-    private fun setupListener() {
-        binding.btnSonidoAve.setOnClickListener {
-            binding.btnSonidoAve.text
 
-            }
-
-        }
-
-    }
+}
