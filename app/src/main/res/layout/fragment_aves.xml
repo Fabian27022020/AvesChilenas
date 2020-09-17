@@ -12,9 +12,11 @@
         android:id="@+id/ed_filtro_texto"
         android:layout_width="280dp"
         android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginStart="4dp"
         android:hint="@string/ingrese_nombre_del_ave"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,6 +25,9 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:text="@string/Buscar"
+        android:padding="@dimen/cardview_default_radius"
+        android:background="#0B163C"
+        android:textColor="#FFFFFF"
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/ed_filtro_texto"
@@ -32,8 +37,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_aves"
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ed_filtro_texto" />
 

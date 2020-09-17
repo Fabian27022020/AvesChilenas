@@ -29,6 +29,7 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
         setupDependencies()
         binding = FragmentDetalleAveBinding.bind(view)
         setupLiveData()
+        setupListener()
 
 
     }
@@ -130,5 +131,11 @@ class DetalleAvesFragment : Fragment(R.layout.fragment_detalle_ave) {
 
     }
 
+    private fun setupListener() {
+        binding.btnVolverLista.setOnClickListener {
+            activity?.onBackPressed()
 
+        }
+
+    }
 }

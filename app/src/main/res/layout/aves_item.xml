@@ -9,7 +9,7 @@
     android:elevation="8dp"
     android:layout_margin="5dp"
     android:id="@+id/cv_item_aves"
-    android:backgroundTint="#111112"
+    android:backgroundTint="#CFB887"
     android:background="@drawable/nubes"
     >
 
@@ -33,7 +33,7 @@
             android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="@string/name"
-            android:textColor="#FFFFFF"
+            android:textColor="#251605"
             android:textSize="13dp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/iv_imageAve"

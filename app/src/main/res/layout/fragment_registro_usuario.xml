@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/registro_ave"
+    android:background="@drawable/logo_mano_ave"
     tools:ignore="ContentDescription">
 
 
@@ -15,6 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:inputType="text"
         android:contentDescription="@string/ingresar_nombre"
         android:hint="@string/ingresar_nombre" />
@@ -25,6 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:layout_marginTop="10dp"
         android:inputType="text"
         android:contentDescription="@string/ingresarRut"
@@ -35,6 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:layout_marginTop="10dp"
         android:inputType="number"
         android:contentDescription="@string/ingresar_telefono"
@@ -48,11 +54,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:maxLines="1"
-        android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:contentDescription="@string/ingresar_email"
-        android:hint="@string/ingresar_email" />
-
+        android:hint="@string/ingresar_email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/et_pass"
@@ -60,6 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:inputType="textPassword"
         android:contentDescription="@string/ingresar_password"
         android:hint="@string/ingresar_password" />
@@ -71,6 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:inputType="textPassword"
         android:contentDescription="@string/confirme_contrasena"
         android:hint="@string/confirme_contrasena"
@@ -84,22 +95,25 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_registrar"
-            android:layout_width="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:background="#0B163C"
+            android:textColor="#FFFFFF"
             android:layout_weight="1"
-
             android:text="@string/registrarse"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_volver"
-            android:layout_width="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:background="#0B163C"
+            android:textColor="#FFFFFF"
             android:layout_weight="1"
             android:text="@string/volver"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false" />
     </LinearLayout>
 
 

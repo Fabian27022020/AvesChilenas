@@ -12,27 +12,29 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_bienvenida"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="52dp"
+        android:gravity="center"
         android:text="@string/bienvenidos_a_la_App_de_Aves_Chilenas"
-        android:layout_marginTop="20dp"
-        android:textSize="24sp"
-        android:textColor="#070707"
-        android:gravity="clip_vertical"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#A7A8AA"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_ir_a_lista"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="350dp"
+        android:background="#0B163C"
         android:text="@string/ir_a_lista_de_aves"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/tv_bienvenida"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tv_bienvenida"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_bienvenida" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
