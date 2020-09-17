@@ -4,14 +4,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fragment_ave"
     android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/ed_filtro_texto"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:hint="@string/ingrese_nombre_del_ave"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_buscar_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/Buscar"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ed_filtro_texto"
+        android:textAllCaps="false"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_aves"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ed_filtro_texto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,39 +9,39 @@
     android:elevation="8dp"
     android:layout_margin="5dp"
     android:id="@+id/cv_item_aves"
-    android:background="#168A37"
+    android:backgroundTint="#111112"
+    android:background="@drawable/nubes"
     >
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/iv_imageAve"
-        android:layout_width="160dp"
-        android:layout_height="150dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_imageAve"
+            android:layout_width="160dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="@string/name"
-        android:textColor="#0F0F10"
-        android:textSize="15dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_imageAve"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/iv_imageAve"
-        app:layout_constraintTop_toTopOf="@+id/iv_imageAve" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="center"
+            android:text="@string/name"
+            android:textColor="#FFFFFF"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_imageAve"
+            app:layout_constraintStart_toEndOf="@+id/iv_imageAve"
+            app:layout_constraintTop_toTopOf="@+id/iv_imageAve" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.cardview.widget.CardView>

@@ -26,5 +26,14 @@ class AvesAdapter (
     override fun onBindViewHolder(holder: AvesViewHolder, position: Int) {
         holder.bind(list[position])
     }
+    fun filterAves(filter : String){
+        list.filter {
+            it.name?.spanish?.contains(filter) ?: false
+
+        }
+
+        notifyDataSetChanged()
+
+    }
 
 }

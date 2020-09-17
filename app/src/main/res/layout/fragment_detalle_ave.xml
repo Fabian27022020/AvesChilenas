@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_ave">
 
     <com.facebook.shimmer.ShimmerFrameLayout
         android:id="@+id/shimmer_cargando"
@@ -24,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:textColor="#101010"
+                android:textColor="#FFFFFF"
                 android:hint="@string/nombre_en_espanol"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -39,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
-                android:textColor="#222025"
+                android:textColor="#ECEAEF"
                 android:text="@string/nombre_en_ingles"
-                android:textSize="13sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nombre_espanol" />
@@ -51,8 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre_en_ingles"
-                android:textSize="10sp"
-                android:textColor="#272629"
+                android:textSize="11sp"
+                android:textColor="#ECECED"
                 app:layout_constraintEnd_toEndOf="@+id/tv_name_en_ingles"
                 app:layout_constraintStart_toStartOf="@+id/tv_name_en_ingles"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name_en_ingles" />
@@ -63,9 +64,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:textColor="#222025"
+                android:textColor="#E9E6ED"
                 android:text="@string/nombre_en_latin"
-                android:textSize="13sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nombre_espanol" />
@@ -75,8 +76,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre_en_latin"
-                android:textSize="10sp"
-                android:textColor="#272629"
+                android:textSize="11sp"
+                android:textColor="#DFDDE3"
                 app:layout_constraintEnd_toEndOf="@+id/tv_name_latin"
                 app:layout_constraintStart_toStartOf="@+id/tv_name_latin"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name_latin" />
@@ -84,24 +85,23 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_imagen_ave"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/logo"
+                android:layout_width="370dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="5dp"
+                android:elevation="5dp"
+                android:src="@drawable/shimmer_fragment_detalle"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.534"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_nombre_en_latin" />
-
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_titulo_descripcions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="@string/descripcion"
                 android:textSize="11sp"
-                android:textColor="#272629"
+                android:textColor="#F5F3FA"
                 app:layout_constraintStart_toStartOf="@+id/tv_titulo_habitat"
                 app:layout_constraintTop_toBottomOf="@+id/iv_imagen_ave" />
 
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/descripcion"
                 android:textSize="14sp"
-                android:textColor="#222025"
+                android:textColor="#EDEDED"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tv_titulo_descripcions"
                 app:layout_constraintTop_toBottomOf="@+id/tv_titulo_descripcions" />
@@ -124,7 +124,7 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/habitat"
                 android:textSize="11sp"
-                android:textColor="#272629"
+                android:textColor="#F8F6FB"
                 app:layout_constraintStart_toStartOf="@+id/tv_habitad"
                 app:layout_constraintTop_toBottomOf="@+id/tv_descripcion" />
 
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:text="@string/habitad"
-                android:textColor="#222025"
+                android:textColor="#F7F4FB"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +147,7 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/sabias_qu"
                 android:textSize="11dp"
-                android:textColor="#272629"
+                android:textColor="#F7F6FA"
                 app:layout_constraintStart_toStartOf="@+id/tv_habitad"
                 app:layout_constraintTop_toBottomOf="@+id/tv_habitad" />
 
@@ -158,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/didyouknow"
-                android:textColor="#222025"
+                android:textColor="#F9F8FB"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/tv_titulo_sabias_que"
@@ -171,7 +171,7 @@
                 android:layout_marginTop="15dp"
                 android:text="@string/tama_o"
                 android:textSize="11dp"
-                android:textColor="#272629"
+                android:textColor="#EDEBF3"
                 app:layout_constraintStart_toStartOf="@+id/tv_size"
                 app:layout_constraintTop_toBottomOf="@+id/tv_didyouknow" />
 
@@ -183,7 +183,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/size"
-                android:textColor="#222025"
+                android:textColor="#F6F5F8"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -196,7 +196,7 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/especie"
                 android:textSize="11dp"
-                android:textColor="#272629"
+                android:textColor="#E8E7EC"
                 app:layout_constraintStart_toStartOf="@+id/tv_species"
                 app:layout_constraintTop_toBottomOf="@+id/tv_size" />
 
@@ -208,7 +208,7 @@
                 android:layout_marginTop="5dp"
                 android:text="@string/species"
                 android:textSize="14sp"
-                android:textColor="#222025"
+                android:textColor="#F4F4F4"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_titulo_especies" />
@@ -230,7 +230,7 @@
                 android:layout_marginTop="30dp"
                 android:text="@string/region_donde_habita"
                 android:textSize="11dp"
-                android:textColor="#272629"
+                android:textColor="#ECECED"
                 app:layout_constraintStart_toStartOf="@+id/tv_title"
                 app:layout_constraintTop_toBottomOf="@+id/iv_fotoMapa" />
 
@@ -241,7 +241,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/title"
-                android:textColor="#222025"
+                android:textColor="#F4F1F8"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"

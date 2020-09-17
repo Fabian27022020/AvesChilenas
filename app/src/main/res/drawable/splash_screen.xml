@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/colorAccent"/>
     <item>
-        <bitmap android:src="@drawable/ave_logo"
+        <bitmap android:src="@drawable/splash_ave_fragment"
             android:gravity="center"/>
     </item>
 </layer-list>

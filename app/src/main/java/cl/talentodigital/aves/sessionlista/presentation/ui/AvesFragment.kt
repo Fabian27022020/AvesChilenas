@@ -13,6 +13,8 @@ import cl.talentodigital.aves.R
 import cl.talentodigital.aves.databinding.FragmentAvesBinding
 import cl.talentodigital.aves.sessionlista.data.remote.AveMapper
 import cl.talentodigital.aves.sessionlista.data.remote.RemoteAvesRepository
+import cl.talentodigital.aves.sessionlista.domain.AvesRepository
+import cl.talentodigital.aves.sessionlista.domain.FiltrarTextoUseCase
 import cl.talentodigital.aves.sessionlista.domain.ObtenerAveUseCase
 import cl.talentodigital.aves.sessionlista.domain.model.Ave
 import cl.talentodigital.aves.sessionlista.domain.model.Aves
@@ -31,6 +33,8 @@ class AvesFragment : Fragment(R.layout.fragment_aves), AvesItemClickListener {
     private lateinit var viewModel: AvesViewModel
     private lateinit var viewModelFactory: AvesViewModelFactory
     private lateinit var avesAdapter: AvesAdapter
+    private lateinit var filtrarTextoUseCase: FiltrarTextoUseCase
+    private lateinit var repository: AvesRepository
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,9 +43,12 @@ class AvesFragment : Fragment(R.layout.fragment_aves), AvesItemClickListener {
         binding = FragmentAvesBinding.bind(view)
         setupLiveData()
         setupRecyclerView()
+
     }
 
     private fun setupDependencies() {
+     //   filtrarTextoUseCase = FiltrarTextoUseCase(repository)
+
         viewModelFactory =
             AvesViewModelFactory(
                 ObtenerAveUseCase(
